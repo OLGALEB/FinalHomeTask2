@@ -1,18 +1,18 @@
 import { expect } from "chai";
 import { browser, ExpectedConditions } from "protractor";
 import { BrowserHacks } from "../../support/browserHacks";
-import { ozByRepo } from "../objectRepository/ozByObject.obj";
+import { OzByRepo } from "../objectRepository/ozByObject.obj";
 
 const defaultTimeout = browser.params.defaultTimeout;
 
-export class ozByPage {
+export class OzByPage {
 
 
-    ozByrepo: ozByRepo
+    ozByrepo: OzByRepo
 
 
     constructor() {
-        this.ozByrepo = new ozByRepo;
+        this.ozByrepo = new OzByRepo;
     }
 
     public async clearBrowserData() {

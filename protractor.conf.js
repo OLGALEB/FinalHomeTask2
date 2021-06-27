@@ -25,7 +25,7 @@ exports.config = {
         foreignLitUrl: "https://oz.by/books/topic1602.html",
         logoiskyURL: "https://oz.by/store/more31.html",
         ozbyInst: "https://www.instagram.com/myozby/",
-        kinopoiskHomeUrl: "https://www.kinopoisk.ru/"
+        agodaUrl: "https://www.21vek.by"
     },
 
 
@@ -80,17 +80,22 @@ exports.config = {
         //-----------------------------------------
         //TODO: Optimize logger for parallel mode
         shardTestFiles: true,
-        maxInstances: 1,
+        maxInstances: 2,
         chromeOptions: {
             'excludeSwitches': ['enable-automation'],
             'useAutomationExtension': false,
             //Standard mode
-            args: ["--window-size=1920,1080"]
+            args: ["--window-size=1920,1080",
+           '--disable-web-security',
+                 '--disable-gpu',
+                '--disable-infobars',
+              '--disable-dev-shm-usage']
                 //-----------------------------------------
                 //Headless Mode
                 //-----------------------------------------
                 //args: ["--headless", "--disable-gpu", "--window-size=1920,1080"]
                 //-----------------------------------------
         }
+    
     }
 }

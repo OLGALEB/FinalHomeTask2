@@ -1,7 +1,7 @@
 
 import { by, element, ElementFinder } from "protractor";
 
-export class ozByRepo {
+export class OzByRepo {
 
     readonly logInButton: ElementFinder = element(by.xpath('//span[contains(text(),"Войти")]'));
 
