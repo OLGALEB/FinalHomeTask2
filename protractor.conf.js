@@ -14,7 +14,7 @@ exports.config = {
     specs: ['features/**/*.feature'],
 
     params: {
-        defaultTimeout: 60500,
+        defaultTimeout: 70000,
         ozbyUrl: "https://oz.by/",
         personalPage: "https://oz.by/personal",
         myReviewsTab: "https://oz.by/personal/?myreviews",
@@ -22,7 +22,9 @@ exports.config = {
         shopBasket:"https://oz.by/checkout/#",
         searchPage:"https://oz.by/search/?q=typescript",
         petsUrl: "https://oz.by/pets/",
-        foreignLitUrl: "https://oz.by/books/topic1602.html"
+        foreignLitUrl: "https://oz.by/books/topic1602.html",
+        logoiskyURL: "https://oz.by/store/more31.html",
+        ozbyInst: "https://www.instagram.com/myozby/"
     },
 
 

@@ -30,13 +30,13 @@ export class ozByPage {
     public async LogIn() {
         let email = "lebedevaolga021@gmail.com";
         let password = "IfXJN3";
-        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.logInButton), defaultTimeout, "jfdlskhjvs");
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.logInButton), defaultTimeout, "Timeout error");
         await this.ozByrepo.logInButton.click();
-        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailRegLink), defaultTimeout, "jfdlskhjvs");
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailRegLink), defaultTimeout, "Timeout error");
         await this.ozByrepo.emailRegLink.click();
-        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailInputField), defaultTimeout, "jfdlskhjvs");
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailInputField), defaultTimeout, "Timeout error");
         await this.ozByrepo.emailInputField.sendKeys(email);
-        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.passwordInputField), defaultTimeout, "jfdlskhjvs");
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.passwordInputField), defaultTimeout, "Timeout error");
         await this.ozByrepo.passwordInputField.sendKeys(password);
         await this.ozByrepo.submitLogInDataButton.click();
         await browser.wait(ExpectedConditions.urlIs(browser.params.ozbyUrl), defaultTimeout, "Timeout error");
@@ -45,6 +45,7 @@ export class ozByPage {
 
 
     public async clickOnUserInfoLink() {
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.userInfoLink), defaultTimeout, "Timeout error");
         await this.ozByrepo.userInfoLink.click();
 
 
@@ -134,18 +135,15 @@ export class ozByPage {
         {
             await this.ozByrepo.bookCheckBox.click();
 
-            // await browser.wait(ExpectedConditions.visibilityOf(await this.ozByrepo.bookCheckBox), defaultTimeout, "Checkbox has incorrect locator");
-            // await browser.actions().mouseMove(this.ozByrepo.bookCheckBox).perform();
+           
         }
-        //await this.ozByrepo.bookCheckBox.click();
+        
     }
 
     public async checkboxCheck() {
 
         await expect(await this.ozByrepo.bookCheckBox.isSelected()).equal(true);
-        // await browser.actions().click(this.ozByrepo.bookCheckBox).perform();
-        // await browser.sleep(2000);
-        // await this.ozByrepo.bookCheckBox.isSelected();
+        
     }
 
 
@@ -153,8 +151,6 @@ export class ozByPage {
 
         await this.ozByrepo.allProductsCheckBox.click();
 
-        // await browser.wait(ExpectedConditions.visibilityOf(await this.ozByrepo.bookCheckBox), defaultTimeout, "Checkbox has incorrect locator");
-        // await browser.actions().mouseMove(this.ozByrepo.bookCheckBox).perform();
     }
 
 
@@ -194,78 +190,51 @@ export class ozByPage {
     }
    
 
+    public async navigateToForeignLitPage() {
+        await browser.navigate().to(browser.params.foreignLitUrl);
+        await browser.wait(ExpectedConditions.urlIs(browser.params.foreignLitUrl), defaultTimeout, "Timeout error");
 
-
-
-    // public async clickHomeProductsDDL() {
-
-    //     await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.homeProductsDDL), defaultTimeout, "Timeout error");
-    //     await this.ozByrepo.homeProductsDDL.click();
-    // }
-
-    // public async clickOnProductsForAnimal() {
-
-    //     await this.ozByrepo.productsForAnimalsValue.click();
-
-    // }
-
-    // public async openedAnimalProductsPageResult() {
-    //     await browser.wait(ExpectedConditions.urlIs(browser.params.petsUrl), defaultTimeout, "Timeout error");
-
-    // }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*     public async unckeckAvailableCheckBox (){
-//await expect(await this.ozByrepo.bookCheckBox.isSelected()).equal(true);
-        await browser.wait(ExpectedConditions.visibilityOf(await this.ozByrepo.availableCheckBoxID), defaultTimeout, "Checkbox has incorrect locator");
-        await browser.actions().mouseMove(this.ozByrepo.availableCheckBoxID).perform();
     }
-// await browser.actions().click(this.ozByrepo.bookCheckBox).perform();
-            // await browser.sleep(2000);
-            // await this.ozByrepo.bookCheckBox.isSelected();
-
-public async Click (){
-    await browser.actions().click(this.ozByrepo.availableCheckBoxID).perform();
-    await browser.sleep(2000);
-    await this.ozByrepo.availableCheckBoxID.isSelected();
-} */
+    
+    public async openDDlValues () {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.optionsDDl), defaultTimeout, "Timeout error");
+        await this.ozByrepo.optionsDDl.click();
+    }
 
 
+    public async selectSheetsBookValue () {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.listPage), defaultTimeout, "Timeout error");
+        await this.ozByrepo.listPage.click();
+    }
 
 
+    public async moveCursorToAllOzShops() {
+        await browser.actions().mouseMove(this.ozByrepo.allOzShops).perform();
+    }
+    
+    public async selectLogoyskiShop () {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.logoyskiShop), defaultTimeout, "Timeout error");
+        await this.ozByrepo.logoyskiShop.click();
+    }
 
+    public async clickViewProducts () {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.viewAllProducts), defaultTimeout, "Timeout error");
+        await this.ozByrepo.viewAllProducts.click();
+    }
+    
+    public async navigateToLogoyskiShopPage() {
+        await browser.navigate().to(browser.params.logoiskyURL);
+        await browser.wait(ExpectedConditions.urlIs(browser.params.logoiskyURL), defaultTimeout, "Timeout error");
 
+    }
 
+    public async clickInstIcon (){
+        await this.ozByrepo.instIcon.click();
+    }
 
+    public async navigateToOzInstPage() {
+        await browser.navigate().to(browser.params.ozbyInst);
+        await browser.wait(ExpectedConditions.urlIs(browser.params.ozbyInst), defaultTimeout, "Timeout error");
 
-
-
-
-
-
-
-
-
-
- // public async clickAiroTransferLink() {
-    //     await this.headerRepo.airoTransfer.click();
-    // }
-
-    // public async checkOpenedTransferPage() {
-
-    //     //await browser.navigate().to(browser.params.transferSite);
-    //     await browser.wait(ExpectedConditions.urlIs(browser.params.transferSite), defaultTimeout, "Timeout error");
-    // }   
+    }
+}

@@ -1,14 +1,13 @@
-//import { SearchRepository } from "../objectRepository/searchObject";
-import { browser, by, element, ElementFinder, ExpectedConditions, Key } from "protractor";
+
+
 import { BrowserHacks } from "../../support/browserHacks";
 import { ozByPage } from "../pageObject/ozBy.page";
-//import { SearchElement } from "../pageObject/search.page";
+
 
 export = function exampleSteps() {
 
-    //const footerPage = new FooterPage;
-    //const searchElement = new SearchElement;
-    const headerPage = new ozByPage;
+
+    const OzByPage = new ozByPage;
 
     this.setDefaultTimeout(700 * 1000);
 
@@ -23,11 +22,11 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
 
@@ -41,20 +40,20 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened1$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email1$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^Click on id link$/, async () => {
-        await headerPage.clickOnUserInfoLink();
+        await OzByPage.clickOnUserInfoLink();
     });
 
 
     this.Then(/^User was redirected to account info page$/, async () => {
-        headerPage.personalAccountInfoResult();
+        OzByPage.personalAccountInfoResult();
     });
 
 
@@ -67,24 +66,24 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened2$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email2$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^Personal info page was opened$/, async () => {
-        await headerPage.clickOnUserInfoLink();
+        await OzByPage.clickOnUserInfoLink();
     });
 
 
     this.Then(/^Click "Мои отзывы" link$/, async () => {
-        await headerPage.redirectToMyReview();
+        await OzByPage.redirectToMyReview();
     });
 
     this.Then(/^User was redirected to review's tab$/, async () => {
-        await headerPage.redirectToMyReviewResult();
+        await OzByPage.redirectToMyReviewResult();
     });
 
 
@@ -98,31 +97,31 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened3$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email3$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^Personal account info page was opened$/, async () => {
-        await headerPage.clickOnUserInfoLink();
+        await OzByPage.clickOnUserInfoLink();
     });
 
     this.Then(/^"Мои отзывы" page was opened$/, async () => {
-        await headerPage.redirectToMyReview();
+        await OzByPage.redirectToMyReview();
     });
 
     this.Then(/^Click on OZ logo$/, async () => {
-        await headerPage.сlickOnOzByLogo();
+        await OzByPage.сlickOnOzByLogo();
     });
 
     this.Then(/^User was redirected main page$/, async () => {
-        await headerPage.redirectToMainResult();
+        await OzByPage.redirectToMainResult();
     });
 
 
- 
+
     this.Before(async () => {
         //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
     });
@@ -132,23 +131,23 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened4$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email4$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^Move cursor to user's nickname$/, async () => {
-        await headerPage.moveCursorToPersonalNick();
+        await OzByPage.moveCursorToPersonalNick();
     });
 
     this.Then(/^Click "Персональная скидка"$/, async () => {
-        await headerPage.clickOnPersonalDiscount();
+        await OzByPage.clickOnPersonalDiscount();
     });
 
     this.Then(/^User was redirected to "Персональная скидка" page$/, async () => {
-        await headerPage.redirectToDiscountPageResult();
+        await OzByPage.redirectToDiscountPageResult();
     });
 
 
@@ -163,21 +162,21 @@ export = function exampleSteps() {
     });
 
     this.Given(/^Homepage oz.by was opened5$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email5$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
 
     this.Then(/^User clicked on "Корзина" icon$/, async () => {
-        await headerPage.clickOnShopBasket();
+        await OzByPage.clickOnShopBasket();
     });
 
 
     this.Then(/^"Корзина" page was opened$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
     });
 
 
@@ -194,40 +193,40 @@ export = function exampleSteps() {
 
 
     this.Given(/^Homepage oz.by was opened6$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email6$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^User clicked on "Корзина"$/, async () => {
-        await headerPage.clickOnShopBasket();
+        await OzByPage.clickOnShopBasket();
     });
 
 
     this.Then(/^"Корзина" page  opened$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
     });
 
     this.Then(/^Check "Выбрать все товары" checkbox$/, async () => {
-        await headerPage.allCheckBoxClick();
+        await OzByPage.allCheckBoxClick();
     });
 
     this.Then(/^Checkbox was checked$/, async () => {
-        await headerPage.allCheckboxCheck();
+        await OzByPage.allCheckboxCheck();
     });
 
     this.Then(/^Click  "Удалить" button$/, async () => {
-        await headerPage.removeAllProductsCheck();
+        await OzByPage.removeAllProductsCheck();
     });
 
     this.Then(/^CLick "Да,удалить" button$/, async () => {
-        await headerPage.removeSubmit();
+        await OzByPage.removeSubmit();
     });
 
     this.Then(/^All products are removed$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
     });
 
 
@@ -247,32 +246,32 @@ export = function exampleSteps() {
 
 
     this.Given(/^Homepage oz.by was opened7$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email7$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^User fill in productName in top search field$/, async () => {
-        await headerPage.fillinTopSearch();
+        await OzByPage.fillinTopSearch();
     });
 
 
     this.Then(/^Press SEARCH$/, async () => {
-        await headerPage.pressSearch();
+        await OzByPage.pressSearch();
     });
 
     this.Then(/^Press "Положить в корзину"$/, async () => {
-        await headerPage.putInBasketClick();
+        await OzByPage.putInBasketClick();
     });
 
     this.Then(/^Click "Уже в корзине"$/, async () => {
-        await headerPage.clickAlreadyInTheBasketButton();
+        await OzByPage.clickAlreadyInTheBasketButton();
     });
 
     this.Then(/^User redirected to "Корзина" page$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
     });
 
 
@@ -289,30 +288,30 @@ export = function exampleSteps() {
 
 
     this.Given(/^Homepage oz.by was opened8$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email8$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^User clicked on "Корзина" icon1$/, async () => {
-        await headerPage.clickOnShopBasket();
+        await OzByPage.clickOnShopBasket();
     });
 
 
     this.Then(/^"Корзина" page  was opened with any product$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
     });
 
 
     this.Then(/^User check selected product checkbox$/, async () => {
-        await headerPage.checkBoxClick();
+        await OzByPage.checkBoxClick();
     });
 
 
     this.Then(/^Checkbox must be checked$/, async () => {
-        await headerPage.checkboxCheck();
+        await OzByPage.checkboxCheck();
     });
 
 
@@ -329,30 +328,30 @@ export = function exampleSteps() {
 
 
     this.Given(/^Homepage oz.by was opened9$/, async () => {
-        await headerPage.navigateToOzBy();
+        await OzByPage.navigateToOzBy();
     });
 
     this.Then(/^User log in via email9$/, async () => {
-        await headerPage.LogIn();
+        await OzByPage.LogIn();
     });
 
     this.Then(/^User clicked on "Корзина" icon2$/, async () => {
-        await headerPage.clickOnShopBasket();
+        await OzByPage.clickOnShopBasket();
     });
 
 
     this.Then(/^"Корзина" page  was opened$/, async () => {
-        await headerPage.openedBasketPageResult();
+        await OzByPage.openedBasketPageResult();
 
     });
-    
+
     this.Then(/^Click on OzBy logo$/, async () => {
-        await headerPage.сlickOnOzByLogo();
+        await OzByPage.сlickOnOzByLogo();
     });
 
 
     this.Then(/^User was redirected back to main page$/, async () => {
-        await headerPage.redirectToMainResult();
+        await OzByPage.redirectToMainResult();
     });
 
 
@@ -360,32 +359,125 @@ export = function exampleSteps() {
 
 
 
-this.Before(async () => {
-    //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-});
+    this.Before(async () => {
+        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
+    });
 
-this.After(async () => {
-    await browserHacks.ClearBrowserData();
-});
+    this.After(async () => {
+        await browserHacks.ClearBrowserData();
+    });
 
-this.Given(/^Homepage oz.by was opened10$/, async () => {
-    await headerPage.navigateToOzBy();
-});
+    this.Given(/^Homepage oz.by was opened10$/, async () => {
+        await OzByPage.navigateToOzBy();
+    });
 
-this.Then(/^User log in via email10$/, async () => {
-    await headerPage.LogIn();
-});
+    this.Then(/^User log in via email10$/, async () => {
+        await OzByPage.LogIn();
+    });
 
-this.Then(/^Move cursor to "Книги"$/, async () => {
-    await headerPage.moveCursorToBooksHover();
-});
+    this.Then(/^Move cursor to "Книги"$/, async () => {
+        await OzByPage.moveCursorToBooksHover();
+    });
 
-this.Then(/^Select "Зарубежная современная литература" value$/, async () => {
-    await headerPage.foreignLitClick();
-});
+    this.Then(/^Select "Зарубежная современная литература" value$/, async () => {
+        await OzByPage.foreignLitClick();
+    });
 
-this.Then(/^User redirected to "Зарубежная современная литература" page$/, async () => {
-    await headerPage.openedForeignLitPageResult();
-});
+    this.Then(/^User redirected to "Зарубежная современная литература" page$/, async () => {
+        await OzByPage.openedForeignLitPageResult();
+    });
+
+
+    this.Before(async () => {
+        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
+    });
+
+    this.After(async () => {
+        await browserHacks.ClearBrowserData();
+    });
+
+    this.Given(/^Homepage oz.by was opened11$/, async () => {
+        await OzByPage.navigateToOzBy();
+    });
+
+    this.Then(/^User log in via email11$/, async () => {
+        await OzByPage.LogIn();
+    });
+
+    this.Then(/^"Зарубежная современная литература" page opened$/, async () => {
+        await OzByPage.navigateToForeignLitPage();
+    });
+
+    this.Then(/^User clicked on "Еще 5..." ddl$/, async () => {
+        await OzByPage.openDDlValues();
+    });
+
+    this.Then(/^Value "Листовые" was selected$/, async () => {
+        await OzByPage.selectSheetsBookValue();
+    });
+
+
+
+
+
+
+
+    this.Before(async () => {
+        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
+    });
+
+    this.After(async () => {
+        await browserHacks.ClearBrowserData();
+    });
+    this.Given(/^Homepage oz.by was opened12$/, async () => {
+        await OzByPage.navigateToOzBy();
+    });
+
+    this.Then(/^User log in via email12$/, async () => {
+        await OzByPage.LogIn();
+    });
+
+    this.Then(/^Move cursor to "Магазины OZ"$/, async () => {
+        await OzByPage.moveCursorToAllOzShops();
+    });
+
+    this.Then(/^Select "Логойский тракт"$/, async () => {
+        await OzByPage.selectLogoyskiShop();
+    });
+
+    this.Then(/^Click "Посмотреть ассортимент"$/, async () => {
+        await OzByPage.clickViewProducts();
+    });
+
+    this.Then(/^User redirected to specific shop page$/, async () => {
+        await OzByPage.navigateToLogoyskiShopPage();
+
+    });
+
+
+
+
+    this.Before(async () => {
+        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
+    });
+
+    this.After(async () => {
+        await browserHacks.ClearBrowserData();
+    });
+    this.Given(/^Homepage oz.by was opened13$/, async () => {
+        await OzByPage.navigateToOzBy();
+    });
+
+    this.Then(/^User log in via email13$/, async () => {
+        await OzByPage.LogIn();
+    });
+
+    this.Then(/^User clicked on instagram icon which located on the footer$/, async () => {
+        await OzByPage.clickInstIcon();
+    });
+
+    this.Then(/^User redirected to oz by instagram page$/, async () => {
+        await OzByPage.navigateToOzInstPage();
+    });
 
 }

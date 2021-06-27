@@ -47,17 +47,21 @@ export class ozByRepo {
 
     readonly foreignLit: ElementFinder = element(by.xpath('//a[contains(text()," Зарубежная современная литература ")]'));
 
-    
-    
-    
-    
-    
-    //readonly productsForAnimalsValue: ElementFinder = element(by.xpath('//*[@id="dinamic_menu_home"]/div/ul/li[3]/a'));
+    readonly optionsDDl: ElementFinder = element (by.xpath('//span[@id="fm-input-s-ti3"]'));
 
-    //readonly homeProductsDDL: ElementFinder = element (by.xpath('//span[@class="mpgs-cat__link__span"]/..//span[contains(text(),"Каталог товаров для дома")]'));
+    readonly listPage: ElementFinder = element (by.xpath('//a[@class="link-facet-bot" and contains(text(),"Листовое издание")]'));
 
-    //readonly bookCell: ElementFinder = element (by.xpath ('//a[@class="needsclick item-type-card__link item-type-card__link--main"]'));
 
-    //readonly availableCheckBoxID: ElementFinder = element (by.xpath ('//input[@id="availability_3"]'));
+    readonly price1: ElementFinder = element(by.xpath('//input[@id="inp1_r_cost"]'));
 
+    readonly remove: ElementFinder = element(by.xpath('//span[@class="filters__title__item" and contains(text(),"Цена")]/../..//span[@class="fm-clear-link trash"]'));
+    
+    
+    readonly allOzShops: ElementFinder = element(by.xpath('//li[@id="storesTab"]'));
+
+    readonly logoyskiShop: ElementFinder = element(by.xpath('//a[@data-location="logoyskiy_trakt_37" and @style="display: block;"]'));
+
+    readonly viewAllProducts: ElementFinder = element(by.xpath('//a[@class="b-map-balloon__button"]'));
+
+    readonly instIcon: ElementFinder = element(by.xpath('//span[@class="i-icon-2 i-icon-2_ig-small"]'));
 }

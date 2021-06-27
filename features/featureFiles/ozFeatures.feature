@@ -1,4 +1,4 @@
-
+@smoke
 Feature: OzBY features testing
 
     #Description: check that user can login via email and password
@@ -98,12 +98,40 @@ Feature: OzBY features testing
         When Click on OzBy logo
         Then User was redirected back to main page
 
-    
-    @smoke
-    Scenario: Open "Зарубежная литература" section form the MainPage 
-        # Description: test that user can open Зарубежная литература" section form the MainPage 
+
+    Scenario: Open "Зарубежная литература" section form the MainPage
+        # Description: test that user can open "Зарубежная литература" section form the MainPage
         Given Homepage oz.by was opened10
         When User log in via email10
         And Move cursor to "Книги"
         And Select "Зарубежная современная литература" value
         Then User redirected to "Зарубежная современная литература" page
+
+
+
+    Scenario: Select book type value from DDL which located in "Обложка" section
+        # Description: test that user can open DDl this book types and select any value
+        Given Homepage oz.by was opened11
+        When User log in via email11
+        And "Зарубежная современная литература" page opened
+        Then User clicked on "Еще 5..." ddl
+        Then Value "Листовые" was selected
+
+
+    Scenario: View specific Oz By shop products
+        # Description: test that user can check products from specific OzBy shop
+        Given Homepage oz.by was opened12
+        When User log in via email12
+        And Move cursor to "Магазины OZ"
+        Then Select "Логойский тракт"
+        And Click "Посмотреть ассортимент"
+        Then User redirected to specific shop page
+
+
+        Scenario: Redirect to instagram oz by page after instagram icon was selected 
+        # Description: test that user will be redirected to oz by facebook/vk/instagram page after specific icon was clicked
+        Given Homepage oz.by was opened13
+        When User log in via email13
+        And User clicked on instagram icon which located on the footer
+        Then User redirected to oz by instagram page
+       
