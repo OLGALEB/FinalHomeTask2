@@ -24,7 +24,8 @@ exports.config = {
         petsUrl: "https://oz.by/pets/",
         foreignLitUrl: "https://oz.by/books/topic1602.html",
         logoiskyURL: "https://oz.by/store/more31.html",
-        ozbyInst: "https://www.instagram.com/myozby/"
+        ozbyInst: "https://www.instagram.com/myozby/",
+        kinopoiskHomeUrl: "https://www.kinopoisk.ru/"
     },
 
 

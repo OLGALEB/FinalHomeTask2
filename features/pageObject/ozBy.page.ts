@@ -135,15 +135,15 @@ export class ozByPage {
         {
             await this.ozByrepo.bookCheckBox.click();
 
-           
+
         }
-        
+
     }
 
     public async checkboxCheck() {
 
         await expect(await this.ozByrepo.bookCheckBox.isSelected()).equal(true);
-        
+
     }
 
 
@@ -179,7 +179,7 @@ export class ozByPage {
     }
 
 
-    public async foreignLitClick () {
+    public async foreignLitClick() {
         await this.ozByrepo.foreignLit.click();
     }
 
@@ -188,21 +188,21 @@ export class ozByPage {
         await browser.wait(ExpectedConditions.urlIs(browser.params.foreignLitUrl), defaultTimeout, "Timeout error");
 
     }
-   
+
 
     public async navigateToForeignLitPage() {
         await browser.navigate().to(browser.params.foreignLitUrl);
         await browser.wait(ExpectedConditions.urlIs(browser.params.foreignLitUrl), defaultTimeout, "Timeout error");
 
     }
-    
-    public async openDDlValues () {
+
+    public async openDDlValues() {
         await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.optionsDDl), defaultTimeout, "Timeout error");
         await this.ozByrepo.optionsDDl.click();
     }
 
 
-    public async selectSheetsBookValue () {
+    public async selectSheetsBookValue() {
         await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.listPage), defaultTimeout, "Timeout error");
         await this.ozByrepo.listPage.click();
     }
@@ -211,24 +211,24 @@ export class ozByPage {
     public async moveCursorToAllOzShops() {
         await browser.actions().mouseMove(this.ozByrepo.allOzShops).perform();
     }
-    
-    public async selectLogoyskiShop () {
+
+    public async selectLogoyskiShop() {
         await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.logoyskiShop), defaultTimeout, "Timeout error");
         await this.ozByrepo.logoyskiShop.click();
     }
 
-    public async clickViewProducts () {
+    public async clickViewProducts() {
         await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.viewAllProducts), defaultTimeout, "Timeout error");
         await this.ozByrepo.viewAllProducts.click();
     }
-    
+
     public async navigateToLogoyskiShopPage() {
         await browser.navigate().to(browser.params.logoiskyURL);
         await browser.wait(ExpectedConditions.urlIs(browser.params.logoiskyURL), defaultTimeout, "Timeout error");
 
     }
 
-    public async clickInstIcon (){
+    public async clickInstIcon() {
         await this.ozByrepo.instIcon.click();
     }
 
