@@ -354,4 +354,38 @@ export = function exampleSteps() {
     this.Then(/^User was redirected back to main page$/, async () => {
         await headerPage.redirectToMainResult();
     });
+
+
+
+
+
+
+this.Before(async () => {
+    //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
+});
+
+this.After(async () => {
+    await browserHacks.ClearBrowserData();
+});
+
+this.Given(/^Homepage oz.by was opened10$/, async () => {
+    await headerPage.navigateToOzBy();
+});
+
+this.Then(/^User log in via email10$/, async () => {
+    await headerPage.LogIn();
+});
+
+this.Then(/^Move cursor to "Книги"$/, async () => {
+    await headerPage.moveCursorToBooksHover();
+});
+
+this.Then(/^Select "Зарубежная современная литература" value$/, async () => {
+    await headerPage.foreignLitClick();
+});
+
+this.Then(/^User redirected to "Зарубежная современная литература" page$/, async () => {
+    await headerPage.openedForeignLitPageResult();
+});
+
 }

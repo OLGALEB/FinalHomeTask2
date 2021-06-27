@@ -20,7 +20,9 @@ exports.config = {
         myReviewsTab: "https://oz.by/personal/?myreviews",
         personalDiscountTab: "https://oz.by/personal/discount.phtml",
         shopBasket:"https://oz.by/checkout/#",
-        searchPage:"https://oz.by/search/?q=typescript"
+        searchPage:"https://oz.by/search/?q=typescript",
+        petsUrl: "https://oz.by/pets/",
+        foreignLitUrl: "https://oz.by/books/topic1602.html"
     },
 
 

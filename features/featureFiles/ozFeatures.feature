@@ -1,4 +1,4 @@
-@smoke
+
 Feature: OzBY features testing
 
     #Description: check that user can login via email and password
@@ -89,12 +89,21 @@ Feature: OzBY features testing
 
 
 
-Scenario: Back to MainPage via OzBy logo check
+    Scenario: Back to MainPage via OzBy logo check
         # Description: test that user can back to main page after he clicked on logo
         Given Homepage oz.by was opened9
         When User log in via email9
         And User clicked on "Корзина" icon2
-        And "Корзина" page  was opened 
-        When Click on OzBy logo 
+        And "Корзина" page  was opened
+        When Click on OzBy logo
         Then User was redirected back to main page
 
+    
+    @smoke
+    Scenario: Open "Зарубежная литература" section form the MainPage 
+        # Description: test that user can open Зарубежная литература" section form the MainPage 
+        Given Homepage oz.by was opened10
+        When User log in via email10
+        And Move cursor to "Книги"
+        And Select "Зарубежная современная литература" value
+        Then User redirected to "Зарубежная современная литература" page

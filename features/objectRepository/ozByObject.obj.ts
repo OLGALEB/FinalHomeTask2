@@ -43,6 +43,19 @@ export class ozByRepo {
 
     readonly removeSubmit: ElementFinder = element(by.xpath('//button[contains(text(),"Да, удалить")]'));
 
+    readonly booksHover: ElementFinder = element(by.xpath('//a[@class= "menu-link-action main-nav__list__item " and contains(text(),"Книги")]'));
+
+    readonly foreignLit: ElementFinder = element(by.xpath('//a[contains(text()," Зарубежная современная литература ")]'));
+
+    
+    
+    
+    
+    
+    //readonly productsForAnimalsValue: ElementFinder = element(by.xpath('//*[@id="dinamic_menu_home"]/div/ul/li[3]/a'));
+
+    //readonly homeProductsDDL: ElementFinder = element (by.xpath('//span[@class="mpgs-cat__link__span"]/..//span[contains(text(),"Каталог товаров для дома")]'));
+
     //readonly bookCell: ElementFinder = element (by.xpath ('//a[@class="needsclick item-type-card__link item-type-card__link--main"]'));
 
     //readonly availableCheckBoxID: ElementFinder = element (by.xpath ('//input[@id="availability_3"]'));

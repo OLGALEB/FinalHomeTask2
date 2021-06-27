@@ -163,21 +163,61 @@ export class ozByPage {
         await expect(await this.ozByrepo.allProductsCheckBox.isSelected()).equal(true);
 
     }
-    
-    
+
+
     public async removeAllProductsCheck() {
 
         await this.ozByrepo.removeAllButton.click();
 
     }
-    
-    public async removeSubmit () {
+
+    public async removeSubmit() {
 
         await this.ozByrepo.removeSubmit.click();
 
     }
-    
+
+
+    public async moveCursorToBooksHover() {
+        await browser.actions().mouseMove(this.ozByrepo.booksHover).perform();
+    }
+
+
+    public async foreignLitClick () {
+        await this.ozByrepo.foreignLit.click();
+    }
+
+
+    public async openedForeignLitPageResult() {
+        await browser.wait(ExpectedConditions.urlIs(browser.params.foreignLitUrl), defaultTimeout, "Timeout error");
+
+    }
+   
+
+
+
+
+    // public async clickHomeProductsDDL() {
+
+    //     await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.homeProductsDDL), defaultTimeout, "Timeout error");
+    //     await this.ozByrepo.homeProductsDDL.click();
+    // }
+
+    // public async clickOnProductsForAnimal() {
+
+    //     await this.ozByrepo.productsForAnimalsValue.click();
+
+    // }
+
+    // public async openedAnimalProductsPageResult() {
+    //     await browser.wait(ExpectedConditions.urlIs(browser.params.petsUrl), defaultTimeout, "Timeout error");
+
+    // }
+
+
 }
+
+
 
 
 
