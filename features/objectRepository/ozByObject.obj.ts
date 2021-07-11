@@ -13,7 +13,7 @@ export class OzByRepo {
 
     readonly submitLogInDataButton: ElementFinder = element(by.xpath('//button[contains(text(),"Войти")]'));
 
-    readonly userInfoLink: ElementFinder = element(by.xpath('//span[@class="top-panel__userbar__user__name__inner"]'));
+    readonly userInfoLink: ElementFinder = element(by.xpath('//span[contains(text(),"oz16389094")]'));
 
     readonly myRewiewLink: ElementFinder = element(by.xpath('//a[contains(text(),"Мои отзывы")]'));
 
@@ -23,13 +23,15 @@ export class OzByRepo {
 
     readonly personalTabLink: ElementFinder = element(by.xpath('//span[contains(text(),"Персональный раздел")]'))
      
-    readonly shopBasket: ElementFinder = element(by.xpath('//a[@class="top-panel__userbar__cart__item"]'));
-
+    readonly shopBasket: ElementFinder = element(by.xpath(' //li[@class="top-panel__userbar__li top-panel__userbar__cart"]'));
+//a[@class="top-panel__userbar__cart__item"]
+   
     readonly topSearch: ElementFinder = element(by.xpath('//input[@id="top-s"]'));
 
-    readonly searchButton: ElementFinder = element(by.xpath('//span[@class="top-panel__search__btn__item"]'));
+    readonly searchButton: ElementFinder = element(by.xpath('//button[@class="top-panel__search__btn"]'));
 
-    readonly putInBasketButton: ElementFinder = element(by.xpath('//span[contains(text(),"Положить")]'));
+    readonly putInBasketButton: ElementFinder = element(by.xpath('//button[@type="submit" and @class="b-product-control__button i-button i-button_large i-button_orange addtocart-btn first-button"]'));
+    //span[contains(text(),"Положить")]'
 
     readonly alreadyInBasket: ElementFinder = element(by.xpath('//span[contains(text(),"Уже")]'));
 
@@ -45,7 +47,7 @@ export class OzByRepo {
 
     readonly booksHover: ElementFinder = element(by.xpath('//a[@class= "menu-link-action main-nav__list__item " and contains(text(),"Книги")]'));
 
-    readonly foreignLit: ElementFinder = element(by.xpath('//a[contains(text()," Зарубежная современная литература ")]'));
+    readonly foreignLit: ElementFinder = element(by.xpath('//a[@href="/books/topic1602.html"]'));
 
     readonly optionsDDl: ElementFinder = element (by.xpath('//span[@id="fm-input-s-ti3"]'));
 
@@ -63,5 +65,5 @@ export class OzByRepo {
 
     readonly viewAllProducts: ElementFinder = element(by.xpath('//a[@class="b-map-balloon__button"]'));
 
-    readonly instIcon: ElementFinder = element(by.xpath('//span[@class="i-icon-2 i-icon-2_ig-small"]'));
+    readonly instIcon: ElementFinder = element(by.xpath('//a[@href="https://www.instagram.com/myozby/"]'));
 }

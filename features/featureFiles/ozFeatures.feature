@@ -45,7 +45,7 @@ Feature: OzBY features testing
         Then User was redirected to "Персональная скидка" page
 
 
-    Scenario: Open "Персональная скидка" page from MainPage for registrated user
+    Scenario: Open "Корзина" page from MainPage for registrated user
         #Description: test that user is able to open shop basket
         Given Homepage oz.by was opened5
         When User log in via email5
@@ -64,6 +64,7 @@ Feature: OzBY features testing
         Then Click  "Удалить" button
         And CLick "Да,удалить" button
         Then All products are removed
+
 
 
 
@@ -128,10 +129,9 @@ Feature: OzBY features testing
         Then User redirected to specific shop page
 
 
-        Scenario: Redirect to instagram oz by page after instagram icon was selected 
-        # Description: test that user will be redirected to oz by facebook/vk/instagram page after specific icon was clicked
+    Scenario: Redirect to instagram oz by page after instagram icon was selected
+        # Description: test that user will be redirected to oz by instagram page after specific icon was clicked
         Given Homepage oz.by was opened13
         When User log in via email13
         And User clicked on instagram icon which located on the footer
         Then User redirected to oz by instagram page
-       

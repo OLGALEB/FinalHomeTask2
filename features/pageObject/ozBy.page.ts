@@ -75,6 +75,7 @@ export class OzByPage {
     }
 
     public async moveCursorToPersonalNick() {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.userInfoLink), defaultTimeout, "Timeout error");
         await browser.actions().mouseMove(this.ozByrepo.userInfoLink).perform();
     }
 
@@ -111,10 +112,12 @@ export class OzByPage {
 
     public async fillinTopSearch() {
         let productName = "Typescript быстро";
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.topSearch), defaultTimeout, "Timeout error");
         await this.ozByrepo.topSearch.sendKeys(productName);
     }
 
     public async pressSearch() {
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.topSearch), defaultTimeout, "Timeout error");
         await this.ozByrepo.searchButton.click();
     }
 
@@ -175,11 +178,13 @@ export class OzByPage {
 
 
     public async moveCursorToBooksHover() {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.booksHover), defaultTimeout, "Timeout error");
         await browser.actions().mouseMove(this.ozByrepo.booksHover).perform();
     }
 
 
     public async foreignLitClick() {
+        await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.foreignLit), defaultTimeout, "Timeout error");
         await this.ozByrepo.foreignLit.click();
     }
 
@@ -229,6 +234,7 @@ export class OzByPage {
     }
 
     public async clickInstIcon() {
+        await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.instIcon), defaultTimeout, "Timeout error");
         await this.ozByrepo.instIcon.click();
     }
 

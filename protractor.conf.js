@@ -14,7 +14,7 @@ exports.config = {
     specs: ['features/**/*.feature'],
 
     params: {
-        defaultTimeout: 70000,
+        defaultTimeout: 70200,
         ozbyUrl: "https://oz.by/",
         personalPage: "https://oz.by/personal",
         myReviewsTab: "https://oz.by/personal/?myreviews",
@@ -25,7 +25,10 @@ exports.config = {
         foreignLitUrl: "https://oz.by/books/topic1602.html",
         logoiskyURL: "https://oz.by/store/more31.html",
         ozbyInst: "https://www.instagram.com/myozby/",
-        agodaUrl: "https://www.21vek.by"
+        vek21Url: "https://www.21vek.by/",
+        productPage: "https://www.21vek.by/baby_monitors/55933_moonybaby.html",
+        shopBasket21Vek: "https://www.21vek.by/order/?1626014819782068",
+        viewedProducts: "https://www.21vek.by/viewed/"
     },
 
 
@@ -85,11 +88,11 @@ exports.config = {
             'excludeSwitches': ['enable-automation'],
             'useAutomationExtension': false,
             //Standard mode
-            args: ["--window-size=1920,1080",
-           '--disable-web-security',
-                 '--disable-gpu',
-                '--disable-infobars',
-              '--disable-dev-shm-usage']
+        //     //args: ["--window-size=1920,1080",
+        //    '--disable-web-security',
+        //          '--disable-gpu',
+        //         '--disable-infobars',
+        //       '--disable-dev-shm-usage']
                 //-----------------------------------------
                 //Headless Mode
                 //-----------------------------------------

@@ -171,6 +171,7 @@ export = function exampleSteps() {
 
 
     this.Then(/^User clicked on "Корзина" icon$/, async () => {
+        
         await ozByPage.clickOnShopBasket();
     });
 
