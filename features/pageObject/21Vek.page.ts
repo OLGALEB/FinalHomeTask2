@@ -129,7 +129,7 @@ export class Vek21Page {
         await browser.wait(ExpectedConditions.urlIs(browser.params.viewedProducts), defaultTimeout, "Timeout error");
 
     }
- 
+
     public async fillInSearchFieldProduct() {
 
         let product = "Стул"
@@ -148,15 +148,14 @@ export class Vek21Page {
         await this.vek21Repo.viewedProductName.isDisplayed();
     }
 
-    public async fillInAvailableProductName(productName : string): promise.Promise<void> {
-        
+    public async fillInAvailableProductName(productName: string): promise.Promise<void> {
+
         await browser.wait(ExpectedConditions.visibilityOf(await this.vek21Repo.searchFeild), defaultTimeout, "Timeout error");
         await this.vek21Repo.searchFeild.click();
         await browser.wait(ExpectedConditions.visibilityOf(await this.vek21Repo.searchFeild), defaultTimeout, "Input  field not found");
         await browser.actions().doubleClick(this.vek21Repo.searchFeild).sendKeys(Key.BACK_SPACE).perform();
         await this.vek21Repo.searchFeild.sendKeys(` ${productName}`);
-        
+
     }
 
-
-} 
+}

@@ -28,7 +28,8 @@ exports.config = {
         vek21Url: "https://www.21vek.by/",
         productPage: "https://www.21vek.by/baby_monitors/55933_moonybaby.html",
         shopBasket21Vek: "https://www.21vek.by/order/?1626014819782068",
-        viewedProducts: "https://www.21vek.by/viewed/"
+        viewedProducts: "https://www.21vek.by/viewed/",
+        amastyUrl: "https://amasty.com/bundles-for-magento-2.html"
     },
 
 

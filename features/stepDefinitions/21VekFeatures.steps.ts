@@ -44,6 +44,9 @@ export = function exampleSteps() {
 
 
 
+
+
+
     this.Before(async () => {
         //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
     });
@@ -119,16 +122,16 @@ export = function exampleSteps() {
     this.Then(/^User click "Оформить заказ"$/, async () => {
         await vek21Page.clickOnArrangeOrder();
     });
-    
+
     this.Then(/^Any payment method was selected$/, async () => {
         await vek21Page.cardPaymentRadioButtonClick();
     });
 
 
 
-   
-   
-   
+
+
+
     this.Before(async () => {
         //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
     });
@@ -141,15 +144,15 @@ export = function exampleSteps() {
     this.Given(/^Homepage 21vek was opened1$/, async () => {
         await vek21Page.navigateTo21Vek();
     });
-    
+
     this.Then(/^User click on Search Field1$/, async () => {
         await vek21Page.clickOnSearchField();
     });
-    
+
     this.Then(/^Fill in "Стул"$/, async () => {
         await vek21Page.fillInSearchFieldProduct();
     });
-    
+
     this.Then(/^Select product value form ddl$/, async () => {
         await vek21Page.selectProductFromDDL();
     });
@@ -157,25 +160,18 @@ export = function exampleSteps() {
     this.Then(/^User click on Account ddl$/, async () => {
         await vek21Page.clickOnAccountDDL();
     });
-    
+
     this.Then(/^Select "Просмотренные"$/, async () => {
         await vek21Page.clickOnViewedProducts();
     });
-    
+
     this.Then(/^Viewed products page was opened$/, async () => {
         await vek21Page.navigateToViewedProductsPage();
     });
-      
-    
+
+
     this.Then(/^User sees selected item$/, async () => {
         await vek21Page.checkViewedProduct();
     });
-        
-       
-        
-       
 
 }
-
-
-
