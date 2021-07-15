@@ -23,6 +23,8 @@ export = function exampleSteps() {
     });
 
 
+    
+    
     this.Given(/^Amasty.com was opened$/, async () => {
         await amastyPage.navigateToAmastyCom();
     });

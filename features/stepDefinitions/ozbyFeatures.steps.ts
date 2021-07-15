@@ -21,6 +21,8 @@ export = function exampleSteps() {
         await browserHacks.ClearBrowserData();
     });
 
+    
+    
     this.Given(/^Homepage oz.by was opened$/, async () => {
         await ozByPage.navigateToOzBy();
     });
@@ -31,13 +33,6 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
 
     this.Given(/^Homepage oz.by was opened1$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -57,13 +52,7 @@ export = function exampleSteps() {
     });
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+  
 
     this.Given(/^Homepage oz.by was opened2$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -87,14 +76,6 @@ export = function exampleSteps() {
     });
 
 
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
 
     this.Given(/^Homepage oz.by was opened3$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -122,13 +103,6 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
 
     this.Given(/^Homepage oz.by was opened4$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -152,15 +126,6 @@ export = function exampleSteps() {
 
 
 
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
     this.Given(/^Homepage oz.by was opened5$/, async () => {
         await ozByPage.navigateToOzBy();
     });
@@ -180,18 +145,7 @@ export = function exampleSteps() {
         await ozByPage.openedBasketPageResult();
     });
 
-
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
+   
 
     this.Given(/^Homepage oz.by was opened6$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -232,20 +186,6 @@ export = function exampleSteps() {
 
 
 
-
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
-
-
     this.Given(/^Homepage oz.by was opened7$/, async () => {
         await ozByPage.navigateToOzBy();
     });
@@ -276,17 +216,7 @@ export = function exampleSteps() {
     });
 
 
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
+  
 
     this.Given(/^Homepage oz.by was opened8$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -315,18 +245,7 @@ export = function exampleSteps() {
         await ozByPage.checkboxCheck();
     });
 
-
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
+   
 
     this.Given(/^Homepage oz.by was opened9$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -358,16 +277,6 @@ export = function exampleSteps() {
 
 
 
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
     this.Given(/^Homepage oz.by was opened10$/, async () => {
         await ozByPage.navigateToOzBy();
     });
@@ -389,13 +298,7 @@ export = function exampleSteps() {
     });
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
 
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
 
     this.Given(/^Homepage oz.by was opened11$/, async () => {
         await ozByPage.navigateToOzBy();
@@ -417,19 +320,7 @@ export = function exampleSteps() {
         await ozByPage.selectSheetsBookValue();
     });
 
-
-
-
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+   
     this.Given(/^Homepage oz.by was opened12$/, async () => {
         await ozByPage.navigateToOzBy();
     });
@@ -458,13 +349,7 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+  
     this.Given(/^Homepage oz.by was opened13$/, async () => {
         await ozByPage.navigateToOzBy();
     });

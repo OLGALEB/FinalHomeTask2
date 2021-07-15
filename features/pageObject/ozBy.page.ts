@@ -28,16 +28,15 @@ export class OzByPage {
     }
 
     public async LogIn() {
-        let email = "lebedevaolga021@gmail.com";
-        let password = "IfXJN3";
+       
         await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.logInButton), defaultTimeout, "Timeout error");
         await this.ozByrepo.logInButton.click();
         await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailRegLink), defaultTimeout, "Timeout error");
         await this.ozByrepo.emailRegLink.click();
         await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.emailInputField), defaultTimeout, "Timeout error");
-        await this.ozByrepo.emailInputField.sendKeys(email);
+        await this.ozByrepo.emailInputField.sendKeys(browser.params.logOz);
         await browser.wait(ExpectedConditions.visibilityOf(this.ozByrepo.passwordInputField), defaultTimeout, "Timeout error");
-        await this.ozByrepo.passwordInputField.sendKeys(password);
+        await this.ozByrepo.passwordInputField.sendKeys(browser.params.passOz);
         await this.ozByrepo.submitLogInDataButton.click();
         await browser.wait(ExpectedConditions.urlIs(browser.params.ozbyUrl), defaultTimeout, "Timeout error");
     }

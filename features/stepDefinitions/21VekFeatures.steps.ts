@@ -22,6 +22,9 @@ export = function exampleSteps() {
     });
 
 
+    
+    
+    
     this.Given(/^Homepage 21vek was opened$/, async () => {
         await vek21Page.navigateTo21Vek();
     });
@@ -30,8 +33,8 @@ export = function exampleSteps() {
         await vek21Page.clickOnSearchField();
     });
 
-    this.Then(/^Fill in product name in search field$/, async () => {
-        await vek21Page.fillInSearchField();
+    this.Then(/^Fill in in search field "(.*?)"$/, async (productName:string) => {
+        await vek21Page.fillInSearchFieldProduct(productName);
     });
 
     this.Then(/^Select specific value form ddl$/, async () => {
@@ -47,13 +50,7 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+   
 
     this.Given(/^Specific product page was opened$/, async () => {
         await vek21Page.navigateToSpecificProductPage();
@@ -70,13 +67,7 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+   
 
     this.Given(/^Specific product page was opened1$/, async () => {
         await vek21Page.navigateToSpecificProductPage();
@@ -91,16 +82,7 @@ export = function exampleSteps() {
     });
 
 
-
-
-
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
+   
 
     this.Given(/^Specific product page was opened2$/, async () => {
         await vek21Page.navigateToSpecificProductPage();
@@ -132,14 +114,7 @@ export = function exampleSteps() {
 
 
 
-    this.Before(async () => {
-        //ACTIONS BEFORE EXECUTING EACH TEST, I.E. SOME PRE-REQS FOR TEST OR SETUP
-    });
-
-    this.After(async () => {
-        await browserHacks.ClearBrowserData();
-    });
-
+   
 
     this.Given(/^Homepage 21vek was opened1$/, async () => {
         await vek21Page.navigateTo21Vek();
@@ -149,8 +124,9 @@ export = function exampleSteps() {
         await vek21Page.clickOnSearchField();
     });
 
-    this.Then(/^Fill in "Стул"$/, async () => {
-        await vek21Page.fillInSearchFieldProduct();
+    this.Then(/^Fill in "(.*?)"$/, async (productName:string) => {
+      
+        await vek21Page.fillInSearchFieldProduct(productName);
     });
 
     this.Then(/^Select product value form ddl$/, async () => {

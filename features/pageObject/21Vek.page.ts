@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import { browser, ExpectedConditions, Key, promise } from "protractor";
+import { protractor } from "protractor/built/ptor";
 import { BrowserHacks } from "../../support/browserHacks";
 import { Vek21Repo } from "../objectRepository/21Vek.obj";
 
@@ -33,12 +34,7 @@ export class Vek21Page {
         await this.vek21Repo.searchFeild.click()
     }
 
-    public async fillInSearchField() {
 
-        let product = "Видеоняня Moonybaby 55933"
-        await browser.wait(ExpectedConditions.visibilityOf(this.vek21Repo.searchFeild), defaultTimeout, "Timeout error");
-        await this.vek21Repo.searchFeild.sendKeys(product);
-    }
 
     public async selectValueFromDDl() {
         await browser.wait(ExpectedConditions.visibilityOf(this.vek21Repo.neededProduct), defaultTimeout, "Timeout error");
@@ -130,12 +126,15 @@ export class Vek21Page {
 
     }
 
-    public async fillInSearchFieldProduct() {
+    public async fillInSearchFieldProduct(productName: string): Promise<void> {
 
-        let product = "Стул"
+
         await browser.wait(ExpectedConditions.visibilityOf(this.vek21Repo.searchFeild), defaultTimeout, "Timeout error");
-        await this.vek21Repo.searchFeild.sendKeys(product);
+        await this.vek21Repo.searchFeild.sendKeys(productName);
+        
+        //browser.actions().sendKeys(protractor.Key.ENTER).perform();
     }
+
 
     public async selectProductFromDDL() {
         await browser.wait(ExpectedConditions.visibilityOf(this.vek21Repo.productID), defaultTimeout, "Timeout error");
@@ -146,16 +145,6 @@ export class Vek21Page {
     public async checkViewedProduct() {
         await browser.wait(ExpectedConditions.visibilityOf(await this.vek21Repo.viewedProductName), defaultTimeout, "Timeout error");
         await this.vek21Repo.viewedProductName.isDisplayed();
-    }
-
-    public async fillInAvailableProductName(productName: string): promise.Promise<void> {
-
-        await browser.wait(ExpectedConditions.visibilityOf(await this.vek21Repo.searchFeild), defaultTimeout, "Timeout error");
-        await this.vek21Repo.searchFeild.click();
-        await browser.wait(ExpectedConditions.visibilityOf(await this.vek21Repo.searchFeild), defaultTimeout, "Input  field not found");
-        await browser.actions().doubleClick(this.vek21Repo.searchFeild).sendKeys(Key.BACK_SPACE).perform();
-        await this.vek21Repo.searchFeild.sendKeys(` ${productName}`);
-
     }
 
 }

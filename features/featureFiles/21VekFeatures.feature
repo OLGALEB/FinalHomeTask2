@@ -1,3 +1,4 @@
+
 @smoke
 Feature: 21vek feature testing
 
@@ -6,7 +7,7 @@ Feature: 21vek feature testing
     Scenario: Sign in to 21vek and select any needed available product
         Given Homepage 21vek was opened
         When User click on Search Field
-        Then Fill in product name in search field
+        Then Fill in in search field "Видеоняня Moonybaby 55933"
         And Select specific value form ddl
         Then User redirected to specific product page
 
@@ -33,6 +34,7 @@ Feature: 21vek feature testing
         And Selected product is presented
         Then User click "Оформить заказ"
         And Any payment method was selected
+
 
 
     #Description: check that user can redirect to viewed products form Account ddl
