@@ -131,8 +131,6 @@ export class Vek21Page {
 
         await browser.wait(ExpectedConditions.visibilityOf(this.vek21Repo.searchFeild), defaultTimeout, "Timeout error");
         await this.vek21Repo.searchFeild.sendKeys(productName);
-        
-        //browser.actions().sendKeys(protractor.Key.ENTER).perform();
     }
 
 

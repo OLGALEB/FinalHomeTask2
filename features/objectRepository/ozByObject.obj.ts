@@ -24,14 +24,14 @@ export class OzByRepo {
     readonly personalTabLink: ElementFinder = element(by.xpath('//span[contains(text(),"Персональный раздел")]'))
      
     readonly shopBasket: ElementFinder = element(by.xpath(' //li[@class="top-panel__userbar__li top-panel__userbar__cart"]'));
-//a[@class="top-panel__userbar__cart__item"]
+
    
     readonly topSearch: ElementFinder = element(by.xpath('//input[@id="top-s"]'));
 
     readonly searchButton: ElementFinder = element(by.xpath('//button[@class="top-panel__search__btn"]'));
 
     readonly putInBasketButton: ElementFinder = element(by.xpath('//button[@type="submit" and @class="b-product-control__button i-button i-button_large i-button_orange addtocart-btn first-button"]'));
-    //span[contains(text(),"Положить")]'
+   
 
     readonly alreadyInBasket: ElementFinder = element(by.xpath('//span[contains(text(),"Уже")]'));
 

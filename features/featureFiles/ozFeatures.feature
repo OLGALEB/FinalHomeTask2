@@ -72,7 +72,7 @@ Feature: OzBY features testing
         # Description: test that user is able to find any product by top search field and put it in "Корзина"
         Given Homepage oz.by was opened7
         When User log in via email7
-        When User fill in productName in top search field
+        When User fill in "Typescript быстро" in top search field
         Then Press SEARCH
         Then Press "Положить в корзину"
         Then Click "Уже в корзине"

@@ -194,8 +194,8 @@ export = function exampleSteps() {
         await ozByPage.LogIn();
     });
 
-    this.Then(/^User fill in productName in top search field$/, async () => {
-        await ozByPage.fillinTopSearch();
+    this.Then(/^User fill in "(.*?)" in top search field$/, async (productName:string) => {
+        await ozByPage.fillinTopSearch(productName);
     });
 
 

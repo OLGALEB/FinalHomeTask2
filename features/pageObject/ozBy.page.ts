@@ -109,8 +109,8 @@ export class OzByPage {
 
     }
 
-    public async fillinTopSearch() {
-        let productName = "Typescript быстро";
+    public async fillinTopSearch(productName: string): Promise<void> {
+        
         await browser.wait(ExpectedConditions.presenceOf(this.ozByrepo.topSearch), defaultTimeout, "Timeout error");
         await this.ozByrepo.topSearch.sendKeys(productName);
     }
